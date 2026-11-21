@@ -19,26 +19,32 @@
 <br/>
 
 ```
-── stack ─────────────────────────────────────────  tap a folder
+── stack ──────────────────
 ```
 
 <details open>
-<summary><b><code>backend/</code></b> &nbsp;·&nbsp; agent-01</summary>
+<summary><b><code>backend/</code></b> · agent-01</summary>
 
 ```
-├── Java · Spring Boot    REST APIs, layered services, auth, validation, tests
-├── C# · .NET             APIs and business logic
-└── Architecture          controllers → services → repositories
+├── Java · Spring Boot
+│   REST APIs, auth, tests
+├── C# · .NET
+│   APIs, business logic
+└── Architecture
+    controller → service → repo
 ```
 </details>
 
 <details>
-<summary><b><code>applied-ai/</code></b> &nbsp;·&nbsp; agent-02</summary>
+<summary><b><code>applied-ai/</code></b> · agent-02</summary>
 
 ```
-├── Python                  my language for AI work and automations
-├── LLM APIs · tool calling agents that call real tools and services
-└── Automations             workflows that remove repetitive manual work
+├── Python
+│   AI work, automations
+├── LLM APIs · tool calling
+│   agents that use real tools
+└── Automations
+    no more repetitive work
 ```
 </details>
 
@@ -46,19 +52,19 @@
 <summary><b><code>data/</code></b></summary>
 
 ```
-├── MySQL      relational modeling and SQL
-├── MongoDB    document storage when the shape changes
-└── Redis      caching and short-lived state
+├── MySQL     relational, SQL
+├── MongoDB   documents
+└── Redis     caching
 ```
 </details>
 
 <details>
-<summary><b><code>cloud-ops/</code></b> &nbsp;·&nbsp; agent-03</summary>
+<summary><b><code>cloud-ops/</code></b> · agent-03</summary>
 
 ```
-├── Docker · Linux    containerized services
-├── Google Cloud      deploying and running services
-└── GitHub Actions    CI/CD pipelines
+├── Docker · Linux
+├── Google Cloud
+└── GitHub Actions  CI/CD
 ```
 </details>
 
@@ -66,26 +72,25 @@
 <summary><b><code>frontend/</code></b></summary>
 
 ```
-└── Angular · React · TypeScript    interfaces that consume my own APIs
+└── Angular · React · TS
 ```
 </details>
 
 <br/>
 
 ```
-── metrics ───────────────────────────────────────
+── metrics ────────────────
+repos ........ 22
+on github .... since 2022
+stack ........ 16 tools
+agents ....... 4 online
 ```
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=121212&title_color=EDEDED&icon_color=D97757&text_color=A3A3A3&ring_color=EDEDED" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=FFFFFF&title_color=111111&icon_color=D97757&text_color=444444&ring_color=111111" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=121212&title_color=EDEDED&icon_color=D97757&text_color=A3A3A3&ring_color=EDEDED" alt="GitHub stats" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=121212&title_color=EDEDED&text_color=A3A3A3" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=111111&text_color=444444" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=121212&title_color=EDEDED&text_color=A3A3A3" alt="Top languages" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-light.svg" />
+    <img src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" width="100%" alt="Contribution activity over the last year, drawn in ASCII" />
   </picture>
 </div>
 
@@ -100,7 +105,7 @@
 <br/>
 
 ```
-── connect ───────────────────────────────────────
+── connect ────────────────
 ```
 
 <div align="center">

@@ -1,4 +1,4 @@
-name: Generate snake
+name: Update profile metrics
 
 on:
   schedule:
@@ -22,6 +22,16 @@ jobs:
           outputs: |
             dist/snake.svg?color_snake=#D97757&color_dots=#161616,#2a2a2a,#555555,#999999,#ededed
             dist/snake-light.svg?color_snake=#D97757&color_dots=#eeeeee,#d0d0d0,#a0a0a0,#5e5e5e,#111111
+
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          path: repo
+
+      - name: Render the ASCII activity card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 repo/scripts/activity.py ${{ github.repository_owner }} dist
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4

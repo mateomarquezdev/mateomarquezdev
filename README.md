@@ -1,139 +1,114 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Mateo" width="399" />
-</div>
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=900&color=00FF00&center=true&vCenter=true&width=640&lines=backend+systems;applied+AI+%26+agents;Java+%C2%B7+Spring+%C2%B7+Python+%C2%B7+.NET;LLMs+%E2%86%92+production+tools" alt="backend systems, applied AI and agents" />
-</div>
-
-<div align="center">
-  <a href="https://mateomarquez.com"><img src="https://img.shields.io/badge/mateomarquez.com-0c0d0b?style=for-the-badge&logo=google-chrome&logoColor=00ff00" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/mateo-marquez/"><img src="https://img.shields.io/badge/LinkedIn-0c0d0b?style=for-the-badge&logo=linkedin&logoColor=00ff00" alt="LinkedIn" /></a>
-  <a href="mailto:mateomarquezdev@gmail.com"><img src="https://img.shields.io/badge/Email-0c0d0b?style=for-the-badge&logo=gmail&logoColor=00ff00" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=mateomarquezdev&style=for-the-badge&color=0c0d0b&label=VISITS" alt="Profile views" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="assets/terminal.svg" alt="whoami: Mateo Marquez, Backend Developer and Applied AI, Buenos Aires" width="720" />
-</div>
-
-<br/>
-
-## `~/knowledge`
-
-<div align="center">
-  <img src="assets/knowledge.svg" alt="Knowledge map: Backend, Applied AI, Data, Cloud and DevOps" width="720" />
-</div>
-
-<br/>
-
-> [!TIP]
-> Click each module to open it ↓
-
-<details>
-<summary><b>☕ Backend</b> &nbsp;<code>java</code> <code>spring</code> <code>.net</code></summary>
-<br/>
-
-<p>
-  <a href="https://www.java.com"><img src="https://skillicons.dev/icons?i=java" height="40" alt="Java" /></a>
-  <a href="https://spring.io"><img src="https://skillicons.dev/icons?i=spring" height="40" alt="Spring" /></a>
-  <a href="https://dotnet.microsoft.com"><img src="https://skillicons.dev/icons?i=dotnet" height="40" alt=".NET" /></a>
-  <a href="https://learn.microsoft.com/dotnet/csharp"><img src="https://skillicons.dev/icons?i=cs" height="40" alt="C#" /></a>
-</p>
-
-- REST APIs and services with **Spring Boot** and **.NET**
-- Layered architecture: controllers → services → repositories
-- Auth, validation, error handling and testing
-
-</details>
-
-<details>
-<summary><b>🤖 Applied AI &amp; Agents</b> &nbsp;<code>python</code> <code>llms</code> <code>agents</code></summary>
-<br/>
-
-<p>
-  <a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python" height="40" alt="Python" /></a>
-</p>
-
-- Agents that use **tool calling** to act on real systems
-- Connecting **LLM APIs** with internal tools, data and workflows
-- Automations that remove repetitive manual work
-
-</details>
-
-<details>
-<summary><b>🗄️ Data</b> &nbsp;<code>mysql</code> <code>mongodb</code> <code>redis</code></summary>
-<br/>
-
-<p>
-  <a href="https://www.mysql.com"><img src="https://skillicons.dev/icons?i=mysql" height="40" alt="MySQL" /></a>
-  <a href="https://www.mongodb.com"><img src="https://skillicons.dev/icons?i=mongodb" height="40" alt="MongoDB" /></a>
-  <a href="https://redis.io"><img src="https://skillicons.dev/icons?i=redis" height="40" alt="Redis" /></a>
-</p>
-
-- Relational modeling and SQL queries
-- Document stores for flexible data
-- Caching with Redis
-
-</details>
-
-<details>
-<summary><b>☁️ Cloud &amp; DevOps</b> &nbsp;<code>docker</code> <code>linux</code> <code>gcp</code></summary>
-<br/>
-
-<p>
-  <a href="https://www.docker.com"><img src="https://skillicons.dev/icons?i=docker" height="40" alt="Docker" /></a>
-  <a href="https://www.kernel.org"><img src="https://skillicons.dev/icons?i=linux" height="40" alt="Linux" /></a>
-  <a href="https://cloud.google.com"><img src="https://skillicons.dev/icons?i=gcp" height="40" alt="Google Cloud" /></a>
-  <a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git" height="40" alt="Git" /></a>
-  <a href="https://github.com/features/actions"><img src="https://skillicons.dev/icons?i=githubactions" height="40" alt="GitHub Actions" /></a>
-</p>
-
-- Containerized services with Docker
-- Deploys on Google Cloud
-- CI/CD with GitHub Actions
-
-</details>
-
-<details>
-<summary><b>🎨 Frontend</b> &nbsp;<code>angular</code> <code>react</code></summary>
-<br/>
-
-<p>
-  <a href="https://angular.dev"><img src="https://skillicons.dev/icons?i=angular" height="40" alt="Angular" /></a>
-  <a href="https://react.dev"><img src="https://skillicons.dev/icons?i=react" height="40" alt="React" /></a>
-  <a href="https://www.typescriptlang.org"><img src="https://skillicons.dev/icons?i=ts" height="40" alt="TypeScript" /></a>
-</p>
-
-- Interfaces that consume my own APIs end to end
-
-</details>
-
-<br/>
-
-## `~/stats`
-
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=0c0d0b&title_color=00ff00&icon_color=00ff00&text_color=c8d3c0&rank_icon=github" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=0c0d0b&title_color=00ff00&text_color=c8d3c0" alt="Top languages" />
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=mateomarquezdev&hide_border=true&background=0C0D0B&ring=00FF00&fire=00FF00&currStreakLabel=00FF00&sideLabels=C8D3C0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6B7365&stroke=33362E" alt="Contribution streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/room-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="assets/room-light.svg" />
+    <img src="assets/room-dark.svg" width="100%" alt="An ASCII room where four little agents work: one codes on a laptop, one listens to music, one sleeps on a bookshelf" />
+  </picture>
 </div>
 
 <br/>
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake-light.svg" />
-    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/whoami-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="assets/whoami-light.svg" />
+    <img src="assets/whoami-dark.svg" width="640" alt="whoami: backend developer and applied AI, Buenos Aires, open to work. I design APIs and services in Java/Spring and .NET, and build AI agents in Python that operate real production tools." />
+  </picture>
+</div>
+
+<br/>
+
+```
+── stack ─────────────────────────────────────────  tap a folder
+```
+
+<details open>
+<summary><b><code>backend/</code></b> &nbsp;·&nbsp; agent-01</summary>
+
+```
+├── Java · Spring Boot    REST APIs, layered services, auth, validation, tests
+├── C# · .NET             APIs and business logic
+└── Architecture          controllers → services → repositories
+```
+</details>
+
+<details>
+<summary><b><code>applied-ai/</code></b> &nbsp;·&nbsp; agent-02</summary>
+
+```
+├── Python                  my language for AI work and automations
+├── LLM APIs · tool calling agents that call real tools and services
+└── Automations             workflows that remove repetitive manual work
+```
+</details>
+
+<details>
+<summary><b><code>data/</code></b></summary>
+
+```
+├── MySQL      relational modeling and SQL
+├── MongoDB    document storage when the shape changes
+└── Redis      caching and short-lived state
+```
+</details>
+
+<details>
+<summary><b><code>cloud-ops/</code></b> &nbsp;·&nbsp; agent-03</summary>
+
+```
+├── Docker · Linux    containerized services
+├── Google Cloud      deploying and running services
+└── GitHub Actions    CI/CD pipelines
+```
+</details>
+
+<details>
+<summary><b><code>frontend/</code></b></summary>
+
+```
+└── Angular · React · TypeScript    interfaces that consume my own APIs
+```
+</details>
+
+<br/>
+
+```
+── metrics ───────────────────────────────────────
+```
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=121212&title_color=EDEDED&icon_color=D97757&text_color=A3A3A3&ring_color=EDEDED" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=FFFFFF&title_color=111111&icon_color=D97757&text_color=444444&ring_color=111111" />
+    <img height="165" src="https://github-readme-stats.vercel.app/api?username=mateomarquezdev&show_icons=true&count_private=true&hide_border=true&bg_color=121212&title_color=EDEDED&icon_color=D97757&text_color=A3A3A3&ring_color=EDEDED" alt="GitHub stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=121212&title_color=EDEDED&text_color=A3A3A3" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=111111&text_color=444444" />
+    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mateomarquezdev&layout=compact&hide_border=true&bg_color=121212&title_color=EDEDED&text_color=A3A3A3" alt="Top languages" />
   </picture>
 </div>
 
 <div align="center">
-  <sub><code>❯ exit</code> &nbsp;·&nbsp; thanks for stopping by</sub>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake-light.svg" />
+    <img src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" alt="Snake eating the contribution graph" />
+  </picture>
 </div>
+
+<br/>
+
+```
+── connect ───────────────────────────────────────
+```
+
+<div align="center">
+  <a href="https://mateomarquez.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-site-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/link-site-light.svg" /><img src="assets/link-site-dark.svg" width="260" alt="portfolio: mateomarquez.com" /></picture></a>
+  <a href="https://www.linkedin.com/in/mateo-marquez/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/link-linkedin-light.svg" /><img src="assets/link-linkedin-dark.svg" width="260" alt="LinkedIn" /></picture></a>
+  <a href="mailto:mateomarquezdev@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-mail-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/link-mail-light.svg" /><img src="assets/link-mail-dark.svg" width="260" alt="Email: say hi" /></picture></a>
+</div>
+
+<br/>
+
+<p align="center"><sub>agents: fan art of Clawd, the Claude Code mascot by Anthropic · non-commercial</sub></p>

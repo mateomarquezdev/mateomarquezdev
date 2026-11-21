@@ -195,7 +195,7 @@ def link_svg(t, cmd, label, art, primary):
     return "".join(o)
 
 
-WHOAMI = [("$ whoami", "cmd"), ("backend developer · applied AI", "strong"), ("buenos aires, ar · open to work", "cmd"),
+WHOAMI = [("$ whoami", "cmd"), ("backend developer · applied AI", "strong"), ("buenos aires, ar", "cmd"),
           ("", "gap"), ("$ cat about.txt", "cmd"),
           ("I design APIs and services in Java/Spring and .NET,", "out"),
           ("and build AI agents in Python that operate real", "out"),

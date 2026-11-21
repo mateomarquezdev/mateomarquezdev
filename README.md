@@ -12,7 +12,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/whoami-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="assets/whoami-light.svg" />
-    <img src="assets/whoami-dark.svg" width="640" alt="whoami: backend developer and applied AI, Buenos Aires, open to work. I design APIs and services in Java/Spring and .NET, and build AI agents in Python that operate real production tools." />
+    <img src="assets/whoami-dark.svg" width="640" alt="whoami: backend developer and applied AI, Buenos Aires. I design APIs and services in Java/Spring and .NET, and build AI agents in Python that operate real production tools." />
   </picture>
 </div>
 

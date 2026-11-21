@@ -113,7 +113,3 @@ agents ....... 4 online
   <a href="https://www.linkedin.com/in/mateo-marquez/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/link-linkedin-light.svg" /><img src="assets/link-linkedin-dark.svg" width="260" alt="LinkedIn" /></picture></a>
   <a href="mailto:mateomarquezdev@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-mail-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="assets/link-mail-light.svg" /><img src="assets/link-mail-dark.svg" width="260" alt="Email: say hi" /></picture></a>
 </div>
-
-<br/>
-
-<p align="center"><sub>agents: fan art of Clawd, the Claude Code mascot by Anthropic · non-commercial</sub></p>

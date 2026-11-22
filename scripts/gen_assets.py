@@ -200,7 +200,61 @@ WHOAMI = [("$ whoami", "cmd"), ("backend developer · applied AI", "strong"), ("
           ("I design APIs and services in Java/Spring and .NET,", "out"),
           ("and build AI agents in Python that operate real", "out"),
           ("production tools: they read data, call APIs and", "out"),
-          ("automate the repetitive work.", "out")]
+          ("automate the repetitive work.", "out"),
+          ("", "gap"), ("$ uptime", "cmd"),
+          ("on github since 2022 · 22 repos · 16 tools", "out")]
+
+
+STACK = [
+    ("backend/", None, "dir"),
+    ("├── java · spring boot", "REST APIs, auth, tests", "item"),
+    ("├── c# · .net", "APIs, business logic", "item"),
+    ("└── architecture", "controller → service → repo", "item"),
+    ("applied-ai/", None, "dir"),
+    ("├── python", "AI work, automations", "item"),
+    ("├── llm apis · tool calling", "agents that use real tools", "item"),
+    ("└── automations", "no more repetitive work", "item"),
+    ("data/", None, "dir"),
+    ("├── mysql", "relational, SQL", "item"),
+    ("├── mongodb", "documents", "item"),
+    ("└── redis", "caching", "item"),
+    ("cloud-ops/", None, "dir"),
+    ("├── docker · linux", "containers", "item"),
+    ("├── google cloud", "deploys", "item"),
+    ("└── github actions", "CI/CD", "item"),
+    ("frontend/", None, "dir"),
+    ("└── angular · react · ts", "UIs for my own APIs", "item"),
+]
+
+
+def tree_svg(t):
+    w, lh = 640, 24
+    rows = []
+    y = 34
+    rows.append((y, "$ tree ~/stack", None, "cmd"))
+    y += 34
+    for i, (name, desc, kind) in enumerate(STACK):
+        if kind == "dir" and i > 0:
+            y += 10
+        rows.append((y, name, desc, kind))
+        y += lh
+    rows.append((y + 6, "5 directories, 13 files", None, "cmd"))
+    h = y + 34
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Tech stack: backend, applied AI, data, cloud and ops, frontend">',
+         f"<style>text{{font-family:{FONT}}}.r{{opacity:0;animation:in .3s forwards}}@keyframes in{{to{{opacity:1}}}}"
+         f".cur{{animation:cu 1s steps(1) infinite}}@keyframes cu{{0%{{opacity:1}}50%{{opacity:0}}}}</style>",
+         f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="10" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>']
+    for k, (yy, name, desc, kind) in enumerate(rows):
+        delay = f' style="animation-delay:{k*0.06:.2f}s"'
+        color = t["dim"] if kind == "cmd" else t["text"]
+        weight = "700" if kind == "dir" else "400"
+        cur = '<tspan class="cur">▍</tspan>' if k == len(rows) - 1 else ""
+        o.append(f'<g class="r"{delay}><text x="22" y="{yy}" font-size="15" font-weight="{weight}" fill="{color}" xml:space="preserve">{escape(name)}{cur}</text>')
+        if desc:
+            o.append(f'<text x="300" y="{yy}" font-size="14" fill="{t["dim"]}" xml:space="preserve">{escape(desc)}</text>')
+        o.append("</g>")
+    o.append("</svg>")
+    return "".join(o)
 
 LINKS = {
     "site": ("$ open mateomarquez.com", "portfolio", [" .--. ", "| () |", " `--´ "], False),
@@ -210,7 +264,8 @@ LINKS = {
 
 for name, t in THEMES.items():
     open(os.path.join(OUT, f"room-{name}.svg"), "w").write(room_svg(t))
-    open(os.path.join(OUT, f"whoami-{name}.svg"), "w").write(card_svg(t, 640, 270, WHOAMI, "whoami: backend developer and applied AI, Buenos Aires"))
+    open(os.path.join(OUT, f"whoami-{name}.svg"), "w").write(card_svg(t, 640, 330, WHOAMI, "whoami: backend developer and applied AI, Buenos Aires"))
+    open(os.path.join(OUT, f"stack-{name}.svg"), "w").write(tree_svg(t))
     for key, (cmd, label, art, primary) in LINKS.items():
         open(os.path.join(OUT, f"link-{key}-{name}.svg"), "w").write(link_svg(t, cmd, label, art, primary))
 print("ok")

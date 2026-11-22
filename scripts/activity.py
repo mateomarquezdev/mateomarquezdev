@@ -55,43 +55,18 @@ def stats(days):
 
 
 def render(t, total, days, cur, best, active, top):
-    weeks = [days[i:i + 7] for i in range(0, len(days), 7)][-52:]
-    nz = sorted(c for _, c in days if c)
-    q = [nz[int(len(nz) * f)] if nz else 1 for f in (0.25, 0.5, 0.75)]
-
-    def cell(c):
-        if c == 0:
-            return "·", t["faint"]
-        if c <= q[0]:
-            return ":", t["dim"]
-        if c <= q[1]:
-            return "+", t["dim"]
-        if c <= q[2]:
-            return "#", t["text"]
-        return "@", t["text"]
-
-    cw, ch, x0, y0 = 11, 13, 22, 112
-    w = x0 * 2 + 52 * cw
-    h = y0 + 7 * ch + 56
+    w, h, x0 = 640, 132, 22
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
-         f'aria-label="{total} contributions in the last year, current streak {cur} days, longest streak {best} days">',
-         f"<style>text{{font-family:{FONT}}}.c{{opacity:0;animation:in .5s forwards}}@keyframes in{{to{{opacity:1}}}}"
-         f".cur{{animation:cu 1s steps(1) infinite}}@keyframes cu{{0%{{opacity:1}}50%{{opacity:0}}}}</style>",
+         f'aria-label="{total} contributions in the last year, current streak {cur} days, longest streak {best} days, {active} active days">',
+         f"<style>text{{font-family:{FONT}}}.cur{{animation:cu 1s steps(1) infinite}}@keyframes cu{{0%{{opacity:1}}50%{{opacity:0}}}}</style>",
          f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="10" fill="{t["bg"]}" stroke="{t["line"]}" stroke-width="2"/>',
-         f'<text x="{x0}" y="34" font-size="13" fill="{t["dim"]}">$ git log --stats --last 52w</text>']
+         f'<text x="{x0}" y="34" font-size="15" fill="{t["dim"]}">$ git log --stats --last 52w</text>']
     cols = [("contributions", f"{total:,}"), ("current streak", f"{cur}d"), ("longest streak", f"{best}d"), ("active days", f"{active}")]
     for i, (k, v) in enumerate(cols):
         x = x0 + i * ((w - 2 * x0) // 4)
-        o.append(f'<text x="{x}" y="66" font-size="22" font-weight="700" fill="{t["text"]}">{escape(v)}</text>')
-        o.append(f'<text x="{x}" y="86" font-size="11" fill="{t["dim"]}">{escape(k)}</text>')
-    for wi, wk in enumerate(weeks):
-        for di, (_, c) in enumerate(wk):
-            s, col = cell(c)
-            o.append(f'<text class="c" style="animation-delay:{wi*0.02:.2f}s" x="{x0 + wi*cw + 2}" y="{y0 + di*ch + 10}" '
-                     f'font-size="12" fill="{col}">{s}</text>')
-    yb = y0 + 7 * ch + 28
-    o.append(f'<text x="{x0}" y="{yb}" font-size="11" fill="{t["dim"]}">less · : + # @ more</text>')
-    o.append(f'<text x="{w - x0}" y="{yb}" text-anchor="end" font-size="11" fill="{t["dim"]}">best day {escape(top[0])} · {top[1]}<tspan class="cur">▍</tspan></text>')
+        o.append(f'<text x="{x}" y="72" font-size="24" font-weight="700" fill="{t["text"]}">{escape(v)}</text>')
+        o.append(f'<text x="{x}" y="94" font-size="12" fill="{t["dim"]}">{escape(k)}</text>')
+    o.append(f'<text x="{x0}" y="118" font-size="12" fill="{t["dim"]}">best day {escape(top[0])} · {top[1]} contributions<tspan class="cur">▍</tspan></text>')
     o.append("</svg>")
     return "".join(o)
 

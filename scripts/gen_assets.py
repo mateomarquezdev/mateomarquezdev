@@ -263,7 +263,7 @@ LINKS = {
 
 def tab_svg(t, icon, label, sub):
     """A tab of the window's top bar: monochrome icon + label."""
-    w, h = 213, 56
+    w, h = 260, 56
     fg, dim = t["text"], t["dim"]
     icons = {
         "globe": f'<g fill="none" stroke="{fg}" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></g>',

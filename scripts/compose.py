@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import activity  # noqa: E402
 from gen_assets import THEMES, FONT, WHOAMI, card_svg, tree_svg, room_svg  # noqa: E402
 
-W = 640
+W = 780
 
 
 def size(svg):
@@ -37,7 +37,7 @@ def nest(svg, x, y, w=None):
 
 def divider(t, y, label):
     return (f'<text x="22" y="{y}" font-size="13" fill="{t["dim"]}" xml:space="preserve">── {label} '
-            f'{"─" * (60 - len(label))}</text>')
+            f'{"─" * (int((W - 44) / 7.8) - len(label) - 4)}</text>')
 
 
 def canvas(t, act_svg):

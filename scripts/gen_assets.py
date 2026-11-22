@@ -272,7 +272,7 @@ def tab_svg(t, icon, label, sub):
     }
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(label)}">'
             f'<style>text{{font-family:{FONT}}}</style>'
-            f'<path d="M1 {h} V11 Q1 1 11 1 H{w-11} Q{w-1} 1 {w-1} 11 V{h}" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>'
+            f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="10" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>'
             f'<g transform="translate(18 16)">{icons[icon]}</g>'
             f'<text x="54" y="26" font-size="15" font-weight="700" fill="{fg}">{escape(label)}</text>'
             f'<text x="54" y="44" font-size="11" fill="{dim}">{escape(sub)}</text>'

@@ -67,7 +67,7 @@ def canvas(t, act_svg):
             f'aria-label="Terminal window: whoami (backend developer and applied AI, Buenos Aires), tech stack, '
             f'contribution activity with a snake, and an ASCII room with little agents">'
             f'<style>text{{font-family:{FONT}}}</style>'
-            f'<rect x="1" y="-11" width="{W-2}" height="{y+10:.0f}" rx="10" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>')
+            f'<rect x="1" y="1" width="{W-2}" height="{y-2:.0f}" rx="10" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>')
     return head + "".join(parts) + "</svg>"
 
 

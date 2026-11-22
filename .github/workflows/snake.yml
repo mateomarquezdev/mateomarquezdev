@@ -28,10 +28,10 @@ jobs:
         with:
           path: repo
 
-      - name: Render the ASCII activity card
+      - name: Compose the profile canvas
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 repo/scripts/activity.py ${{ github.repository_owner }} dist
+        run: python3 repo/scripts/compose.py ${{ github.repository_owner }} dist
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4

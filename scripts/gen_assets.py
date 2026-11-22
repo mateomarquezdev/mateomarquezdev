@@ -2,8 +2,6 @@
 import os, sys
 from xml.sax.saxutils import escape
 
-OUT = sys.argv[1]
-os.makedirs(OUT, exist_ok=True)
 
 AGENT = "#D97757"
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
@@ -146,7 +144,7 @@ def room_svg(t):
             o.append(f'<text x="{mx+8}" y="{my + 16 + k*lh}" xml:space="preserve">{escape(ln)}</text>')
     o.append("</g></g>")
     # status
-    o.append(f'<rect x="{sw-170}" y="{PAD-2}" width="154" height="18" fill="{t["bg"]}"/>')
+    o.append(f'<rect x="{sw-170}" y="{PAD-2}" width="154" height="18" fill="{t["panel"]}"/>')
     o.append(f'<text x="{sw-PAD-4}" y="{PAD+11}" text-anchor="end" font-size="12" fill="{t["dim"]}">● 4 agents online<tspan class="cur">_</tspan></text>')
     # agents
     desk_y = PAD + 34 * CH
@@ -262,10 +260,36 @@ LINKS = {
     "mail": ("$ mail --to me", "say hi", ["+----+", "|\\  /|", "+----+"], True),
 }
 
-for name, t in THEMES.items():
-    open(os.path.join(OUT, f"room-{name}.svg"), "w").write(room_svg(t))
-    open(os.path.join(OUT, f"whoami-{name}.svg"), "w").write(card_svg(t, 640, 330, WHOAMI, "whoami: backend developer and applied AI, Buenos Aires"))
-    open(os.path.join(OUT, f"stack-{name}.svg"), "w").write(tree_svg(t))
-    for key, (cmd, label, art, primary) in LINKS.items():
-        open(os.path.join(OUT, f"link-{key}-{name}.svg"), "w").write(link_svg(t, cmd, label, art, primary))
-print("ok")
+
+def tab_svg(t, icon, label, sub):
+    """A tab of the window's top bar: monochrome icon + label."""
+    w, h = 213, 56
+    fg, dim = t["text"], t["dim"]
+    icons = {
+        "globe": f'<g fill="none" stroke="{fg}" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></g>',
+        "linkedin": f'<rect x="3" y="3" width="18" height="18" rx="3" fill="{fg}"/><text x="12" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="{t["panel"]}" font-family="Arial, Helvetica, sans-serif">in</text>',
+        "mail": f'<g fill="none" stroke="{fg}" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></g>',
+    }
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(label)}">'
+            f'<style>text{{font-family:{FONT}}}</style>'
+            f'<path d="M1 {h} V11 Q1 1 11 1 H{w-11} Q{w-1} 1 {w-1} 11 V{h}" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="2"/>'
+            f'<g transform="translate(18 16)">{icons[icon]}</g>'
+            f'<text x="54" y="26" font-size="15" font-weight="700" fill="{fg}">{escape(label)}</text>'
+            f'<text x="54" y="44" font-size="11" fill="{dim}">{escape(sub)}</text>'
+            f'<text x="{w-18}" y="34" text-anchor="end" font-size="15" fill="{fg}">↗</text></svg>')
+
+
+TABS = {"site": ("globe", "portfolio", "mateomarquez.com"),
+        "linkedin": ("linkedin", "linkedin", "/in/mateo-marquez"),
+        "mail": ("mail", "email", "say hi")}
+
+
+def main(OUT):
+    os.makedirs(OUT, exist_ok=True)
+    for name, t in THEMES.items():
+        for key, (icon, label, sub) in TABS.items():
+            open(os.path.join(OUT, f"tab-{key}-{name}.svg"), "w").write(tab_svg(t, icon, label, sub))
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])

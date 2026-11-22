@@ -16,22 +16,6 @@
 
 <br/>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-light.svg" />
-    <img src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" width="640" alt="Contribution stats for the last year" />
-  </picture>
-</div>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake-light.svg" />
-    <img src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/snake.svg" width="640" alt="Snake eating the contribution graph" />
-  </picture>
-</div>
-
 <br/>
 
 <div align="center">
@@ -39,6 +23,16 @@
     <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg" />
     <img src="assets/stack-dark.svg" width="640" alt="Tech stack. backend: Java, Spring Boot, C#, .NET, architecture. applied-ai: Python, LLM APIs, tool calling, automations. data: MySQL, MongoDB, Redis. cloud-ops: Docker, Linux, Google Cloud, GitHub Actions. frontend: Angular, React, TypeScript." />
+  </picture>
+</div>
+
+<br/>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-light.svg" />
+    <img src="https://raw.githubusercontent.com/mateomarquezdev/mateomarquezdev/output/activity-dark.svg" width="640" alt="Contribution stats for the last year with a snake eating the contribution graph" />
   </picture>
 </div>
 

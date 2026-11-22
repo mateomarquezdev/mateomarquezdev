@@ -54,8 +54,23 @@ def stats(days):
     return cur, best, active, top
 
 
-def render(t, total, days, cur, best, active, top):
-    w, h, x0 = 640, 132, 22
+def embed_snake(path, x, y, w):
+    """Inline the snake SVG inside the card, cropped to the grid (no progress bar)."""
+    import re
+    if not path or not os.path.exists(path):
+        return "", 0
+    src = open(path).read()
+    vw, vh = 852, 118
+    h = round(w * vh / vw)
+    src = re.sub(r"<svg[^>]*>", f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="-4 -4 {vw} {vh}">', src, count=1)
+    src = re.sub(r"<\?xml[^>]*>", "", src)
+    return src, h
+
+
+def render(t, total, days, cur, best, active, top, snake=None):
+    w, x0 = 640, 22
+    snake_svg, sh = embed_snake(snake, x0, 124, w - 2 * x0)
+    h = 124 + (sh + 16 if sh else 0) + 36
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" '
          f'aria-label="{total} contributions in the last year, current streak {cur} days, longest streak {best} days, {active} active days">',
          f"<style>text{{font-family:{FONT}}}.cur{{animation:cu 1s steps(1) infinite}}@keyframes cu{{0%{{opacity:1}}50%{{opacity:0}}}}</style>",
@@ -66,7 +81,8 @@ def render(t, total, days, cur, best, active, top):
         x = x0 + i * ((w - 2 * x0) // 4)
         o.append(f'<text x="{x}" y="72" font-size="24" font-weight="700" fill="{t["text"]}">{escape(v)}</text>')
         o.append(f'<text x="{x}" y="94" font-size="12" fill="{t["dim"]}">{escape(k)}</text>')
-    o.append(f'<text x="{x0}" y="118" font-size="12" fill="{t["dim"]}">best day {escape(top[0])} · {top[1]} contributions<tspan class="cur">▍</tspan></text>')
+    o.append(f'<text x="{x0}" y="{h - 20}" font-size="12" fill="{t["dim"]}">best day {escape(top[0])} · {top[1]} contributions<tspan class="cur">▍</tspan></text>')
+    o.append(snake_svg)
     o.append("</svg>")
     return "".join(o)
 
@@ -77,11 +93,12 @@ def main():
     else:
         total, days = fetch(sys.argv[1])
     out = sys.argv[2]
+    snakes = {"dark": os.path.join(out, "snake.svg"), "light": os.path.join(out, "snake-light.svg")}
     os.makedirs(out, exist_ok=True)
     s = stats(days)
     for name, t in THEMES.items():
         with open(os.path.join(out, f"activity-{name}.svg"), "w") as f:
-            f.write(render(t, total, days, *s))
+            f.write(render(t, total, days, *s, snake=snakes[name]))
 
 
 if __name__ == "__main__":
